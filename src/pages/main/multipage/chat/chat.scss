@@ -1,0 +1,38 @@
+.chat {
+    position: relative;
+
+    .input {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        background-color: red;
+        transform: translateY(27.5rem);
+
+        input {
+            width: 100%;
+            padding: .8rem 1rem;
+            outline: none;
+            border: 1px solid rgba(194, 194, 194, .3);
+            color: rgb(236, 236, 236);
+        }
+    }
+    .con {
+        color: #fff;
+        padding: 1rem;
+
+        .msgx {
+            margin-bottom: .5rem;
+            p {
+                .time {
+                    color: gray;
+                    font-size: .8rem;
+                    margin-right: 1rem;
+                }
+                .name {
+                    color: goldenrod;
+                    margin-right: .7rem;
+                }
+            }
+        }
+    }
+}

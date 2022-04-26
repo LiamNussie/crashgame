@@ -1,0 +1,66 @@
+.multipage {
+    background-color: rgb(15, 2, 27);
+    flex: 1 1 400px;
+    height: 100%;
+    background-color: green;
+    border-radius: 10px;
+    position: relative;
+    // overflow: hidden;
+
+    .nav {
+        color: #fff;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        // background-color: rgba(255, 255, 255, .4);
+        border-right: 1px solid rgba(123, 123, 123, .2);
+
+        .active {
+            padding-bottom: 3px;
+            border-bottom: 2px solid rgb(202, 202, 202);
+        }
+
+        li {
+            // padding: .2rem 0;
+            list-style: none;
+            // flex: 1 1 100px;
+            text-align: center;
+            cursor: pointer;
+            transform: rotate(270deg);
+            transition: 250ms ease;
+            // background-color: rgba(255, 255, 255, .4);
+            // background-color: rgb(74, 74, 74);
+        }
+    }
+    .page {
+        margin-left: 4.2em;
+        height: 100%;
+
+        table {
+            border-spacing: 0 1rem;
+            width: 100%;
+            th {
+                background-color: rgba(202, 202, 202, 0.4);
+                text-align: left;
+                color: rgb(224, 224, 224);
+                padding: .3rem .5rem;
+            }
+            .side {
+                text-align: left;
+            }
+            td {
+                text-align: right;
+                // background-color: #fff;
+                color: rgb(224, 224, 224);
+                border: none;
+                color: goldenrod;
+                padding: 0 .5rem;
+                width: 100%;
+            }
+        }
+    }
+
+}
