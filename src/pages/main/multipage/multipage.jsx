@@ -40,6 +40,41 @@ const players = [
     },
 ]
 
+const history = [
+    {
+        bust: "2.65x",
+        hash: "9af4decc789gj"
+    },
+    {
+        bust: "9.88x",
+        hash: "9af4decc789gj"
+    },
+    {
+        bust: "2.43x",
+        hash: "9af4decc789gj"
+    },
+    {
+        bust: "4.77x",
+        hash: "9af4decc789gj"
+    },
+    {
+        bust: "50.10x",
+        hash: "9af4decc789gj"
+    },
+    {
+        bust: "14.56x",
+        hash: "9af4decc789gj"
+    },
+    {
+        bust: "1.22x",
+        hash: "9af4decc789gj"
+    },
+    {
+        bust: "2.34x",
+        hash: "9af4decc789gj"
+    }
+]
+
 
 const Multipage = () => {
     const [page, setPage] = useState("players")
@@ -57,12 +92,22 @@ const Multipage = () => {
                     <table>
                         <tr>
                             <th>BUST</th>
-                            <th>@</th>
+                            {/* <th>@</th> */}
                             <th>AMOUNT</th>
-                            <th>PROFIT</th>
+                            <th>WON</th>
                             <th>HASH</th>
                         </tr>
-                       
+                        {history.map(({bust, hash}, index) => {
+                                    return (
+                                        <tr key={index}>
+                                            <td className='side'>{bust}</td>
+                                            {/* <td>-</td> */}
+                                            <td>-</td>
+                                            <td>-</td>
+                                            <td>{hash.slice(0,5)}...</td>
+                                        </tr>
+                                    )
+                                })}
                     </table>
                 </div>
                 }
@@ -71,15 +116,15 @@ const Multipage = () => {
                         <table>
                             <tr>
                                 <th>USER</th>
-                                <th>@</th>
+                                {/* <th>@</th> */}
                                 <th>AMOUNT</th>
-                                <th>PROFIT</th>
+                                <th>WON</th>
                             </tr>
                             {players.map(({name, amount, profit}, index) => {
                                     return (
                                         <tr key={index}>
                                             <td className='side'>{name}</td>
-                                            <td>-</td>
+                                            {/* <td>-</td> */}
                                             <td>{amount}</td>
                                             <td>{profit}</td>
                                         </tr>

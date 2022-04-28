@@ -5,15 +5,16 @@
         position: absolute;
         bottom: 0;
         width: 100%;
-        background-color: red;
-        transform: translateY(27.5rem);
+        transform: translateY(16.2rem);
 
         input {
             width: 100%;
             padding: .8rem 1rem;
             outline: none;
+            background-color: transparent;
             border: 1px solid rgba(194, 194, 194, .3);
             color: rgb(236, 236, 236);
+            border-radius: 0 0 10px 0;
         }
     }
     .con {
