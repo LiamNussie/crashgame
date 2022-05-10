@@ -1,6 +1,8 @@
+import { useEffect } from 'react';
 import { useState } from 'react';
 import Chat from './chat/chat';
 import './multipage.scss';
+import axios from 'axios'
 
 const players = [
     {
@@ -77,7 +79,14 @@ const history = [
 
 
 const Multipage = () => {
-    const [page, setPage] = useState("players")
+    const [page, setPage] = useState("players");
+
+    useEffect(() => {
+        axios.get("http://localhost:3002/getPastOdds")
+        .then(res => console.log(res))
+        .catch(err => console.log(err))
+    }, [])
+
     return (
         <div className="multipage">
             <ul className="nav">
